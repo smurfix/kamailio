@@ -1,5 +1,4 @@
 # debian fixes
-no_lib64_on_64_bits.patch
 no_INSTALL_file.patch
 fix_export.patch
 no_tls_openssl_mutex_shared_util.patch
