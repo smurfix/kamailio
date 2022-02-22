@@ -1,4 +1,3 @@
 # debian fixes
-fix_export.patch
 no_tls_openssl_mutex_shared_util.patch
 0001-Stop-setting-march-on-arm.patch
