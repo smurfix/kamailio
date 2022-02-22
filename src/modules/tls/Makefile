@@ -72,7 +72,7 @@ LIBS+= $(TLS_EXTRA_LIBS)
 # dcm: tls.cfg installed via local 'install-cfg' to update paths
 #MOD_INSTALL_CFGS=tls.cfg
 
-MOD_INSTALL_UTILS=utils/openssl_mutex_shared
+MOD_INSTALL_UTILS=
 
 include ../../Makefile.modules
 
