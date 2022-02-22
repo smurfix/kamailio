@@ -1,0 +1,48 @@
+From 0b8fa33aa76c1ed84ac7e9560cda88c36bee6740 Mon Sep 17 00:00:00 2001
+From: Adrian Bunk <bunk@debian.org>
+Date: Wed, 9 Feb 2022 06:21:59 +0200
+Subject: Stop setting -march on arm
+
+This broke the Debian armhf build due to the Debian gcc maintainer
+changing the semantics of -march to disable FPU support unless +fp
+is included.
+---
+ src/Makefile.defs | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/src/Makefile.defs b/src/Makefile.defs
+index d2d7c60814..ccf4fa96cb 100644
+--- a/src/Makefile.defs
++++ b/src/Makefile.defs
+@@ -1267,7 +1267,7 @@ ifeq	($(ARCH), arm)
+ ifeq		($(CC_NAME), gcc)
+ 				C_DEFS+=-DCC_GCC_LIKE_ASM
+ 				#common stuff
+-				CFLAGS+=-marm -march=armv5t $(CC_OPT) -funroll-loops -fsigned-char $(PROFILE)
++				CFLAGS+=-marm $(CC_OPT) -funroll-loops -fsigned-char $(PROFILE)
+ 			#if gcc 4.5+ or 4.2+
+ ifeq (,$(strip $(filter-out 4.2+ 4.5+ 5.0+ 6.0+ 7.0+ 8.0+ 9.0+,$(CC_SHORTVER))))
+ 					CFLAGS+= -ftree-vectorize -fno-strict-overflow
+@@ -1315,7 +1315,7 @@ ifeq	($(ARCH), arm6)
+ ifeq		($(CC_NAME), gcc)
+ 				C_DEFS+=-DCC_GCC_LIKE_ASM
+ 				#common stuff
+-				CFLAGS+=-march=armv6 $(CC_OPT) -funroll-loops -fsigned-char \
++				CFLAGS+=-$(CC_OPT) -funroll-loops -fsigned-char \
+ 						$(PROFILE)
+ 			#if gcc 7.0+, 6.0+, 5.0+, 4.5+ or 4.2+
+ ifeq (,$(strip $(filter-out 4.2+ 4.5+ 5.0+ 6.0+ 7.0+ 8.0+ 9.0+,$(CC_SHORTVER))))
+@@ -1361,8 +1361,8 @@ ifeq	($(ARCH), arm7)
+ 		# if gcc
+ ifeq		($(CC_NAME), gcc)
+ 				C_DEFS+=-DCC_GCC_LIKE_ASM
+-				#common stuff, use armv7-a as lowest common architecture
+-				CFLAGS+=-march=armv7-a $(CC_OPT) -funroll-loops -fsigned-char \
++				#common stuff
++				CFLAGS+=-$(CC_OPT) -funroll-loops -fsigned-char \
+ 						$(PROFILE)
+ 			#if gcc 7.0+, 6.0+, 5.0+, 4.5+ or 4.2+
+ ifeq (,$(strip $(filter-out 4.2+ 4.5+ 5.0+ 6.0+ 7.0+ 8.0+ 9.0+,$(CC_SHORTVER))))
+-- 
+2.20.1
+

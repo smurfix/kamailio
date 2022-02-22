@@ -1,0 +1,1223 @@
+kamailio (5.5.4-1) unstable; urgency=medium
+
+  * New upstream version 5.5.4
+  * remove already applied patches
+  * remove python3-dev dependency from binaries (Closes: #1005774)
+
+ -- Victor Seva <vseva@debian.org>  Thu, 17 Feb 2022 23:41:52 +0100
+
+kamailio (5.5.3-2) unstable; urgency=medium
+
+  [ Adrian Bunk ]
+  * Limit kamailio-secsipid-modules to architectures where libsecsipid is available
+  * Fix a race condition that sometimes resulted in FTBFS (Closes: #953090)
+  * Stop setting -march on arm
+
+ -- Victor Seva <vseva@debian.org>  Thu, 10 Feb 2022 11:51:37 +0100
+
+kamailio (5.5.3-1) unstable; urgency=medium
+
+  * New upstream version 5.5.3
+  * update copyright paths and licences
+  * add upstream/metadata
+  * add lwsc and secsipid modules
+
+ -- Victor Seva <vseva@debian.org>  Fri, 03 Dec 2021 15:21:15 +0100
+
+kamailio (5.4.3-1) unstable; urgency=medium
+
+  * New upstream version 5.4.3
+  * update Standards-Version, no changes needed
+  * fix duplicate-globbing-patterns at debian/copyright
+
+ -- Victor Seva <vseva@debian.org>  Tue, 15 Dec 2020 11:09:36 +0100
+
+kamailio (5.4.2-1) unstable; urgency=medium
+
+  * New upstream version 5.4.2
+
+ -- Victor Seva <vseva@debian.org>  Wed, 28 Oct 2020 14:33:29 +0100
+
+kamailio (5.4.1-1) unstable; urgency=medium
+
+  * New upstream version 5.4.1
+
+ -- Victor Seva <vseva@debian.org>  Tue, 01 Sep 2020 14:27:59 +0200
+
+kamailio (5.4.0-2) unstable; urgency=medium
+
+  * new kamailio-mqtt-modules package
+
+ -- Victor Seva <vseva@debian.org>  Thu, 30 Jul 2020 14:21:24 +0200
+
+kamailio (5.4.0-1) unstable; urgency=medium
+
+  * New upstream version 5.4.0
+
+ -- Victor Seva <vseva@debian.org>  Thu, 30 Jul 2020 13:38:45 +0200
+
+kamailio (5.3.5-1) unstable; urgency=medium
+
+  * New upstream version 5.3.5
+
+ -- Victor Seva <vseva@debian.org>  Tue, 23 Jun 2020 11:42:32 +0200
+
+kamailio (5.3.4-1) unstable; urgency=medium
+
+  * New upstream version 5.3.4
+
+ -- Victor Seva <vseva@debian.org>  Mon, 11 May 2020 10:56:44 +0200
+
+kamailio (5.3.3-1) unstable; urgency=medium
+
+  * New upstream version 5.3.3
+
+ -- Victor Seva <vseva@debian.org>  Mon, 30 Mar 2020 15:41:45 +0200
+
+kamailio (5.3.2-1) unstable; urgency=medium
+
+  * New upstream version 5.3.2
+
+ -- Victor Seva <vseva@debian.org>  Fri, 10 Jan 2020 09:22:59 +0100
+
+kamailio (5.3.1-1) unstable; urgency=medium
+
+  * New upstream version 5.3.1
+  * remove already applied patches
+
+ -- Victor Seva <vseva@debian.org>  Mon, 02 Dec 2019 12:47:34 +0100
+
+kamailio (5.3.0-2) unstable; urgency=medium
+
+  * allow group writes to RuntimeDirectory
+
+ -- Victor Seva <vseva@debian.org>  Wed, 23 Oct 2019 11:48:45 +0200
+
+kamailio (5.3.0-1) unstable; urgency=medium
+
+  * New upstream version 5.3.0
+  * update systemd service file
+  * remove python2 support (closes: #936778)
+  * update rules to use the debhelper sequencer
+  * use debhelper-compat 12
+  * clean lintian-overrides
+  * update lintian-overrides for examples configs
+  * add fixes fixed upstream
+  * don't build tls util, not necessary for 5.3.0
+  * fix systemd-service-file-missing-documentation-key
+  * fix description-synopsis-starts-with-article
+  * update Standards-Version, no changes needed
+  * fix package-contains-empty-directory
+
+ -- Victor Seva <vseva@debian.org>  Wed, 23 Oct 2019 09:52:08 +0200
+
+kamailio (5.2.3-1) unstable; urgency=medium
+
+  * New upstream version 5.2.3
+
+ -- Victor Seva <vseva@debian.org>  Mon, 03 Jun 2019 10:58:36 +0200
+
+kamailio (5.2.2-1) unstable; urgency=medium
+
+  * New upstream version 5.2.2
+
+ -- Victor Seva <vseva@debian.org>  Wed, 27 Mar 2019 10:14:29 +0100
+
+kamailio (5.2.1-1) unstable; urgency=medium
+
+  * New upstream version 5.2.1
+  * remove already applied upstream patches
+
+ -- Victor Seva <vseva@debian.org>  Thu, 17 Jan 2019 08:13:17 +0100
+
+kamailio (5.2.0-2) unstable; urgency=medium
+
+  * add kamailio-python3-modules
+  * add kamailio-ruby-modules
+  * add upstream fixes from 5.2 branch
+
+ -- Victor Seva <vseva@debian.org>  Sat, 05 Jan 2019 10:21:35 +0100
+
+kamailio (5.2.0-1) unstable; urgency=medium
+
+  [ Michael Prokop ]
+  * Drop deprecated lintian overrides for kamailio-java-modules
+
+  [ Victor Seva ]
+  * New upstream version 5.2.0
+  * add upstream fixes from 5.2 (Closes: #906233)
+  * remove kamailio-carrierroute-modules
+  * fix module names in pkg description
+  * add libmnl-dev for new ims_ipsec_pcscf module
+  * kamailio.service: update from upstream
+
+ -- Victor Seva <vseva@debian.org>  Mon, 03 Dec 2018 15:03:22 +0100
+
+kamailio (5.1.6-1) unstable; urgency=medium
+
+  * update standards-version to 4.1.2 no changes
+  * New upstream version 5.1.6
+
+ -- Victor Seva <vseva@debian.org>  Fri, 19 Oct 2018 18:19:27 +0200
+
+kamailio (5.1.5-1) unstable; urgency=medium
+
+  * New upstream version 5.1.5
+
+ -- Victor Seva <vseva@debian.org>  Fri, 24 Aug 2018 11:04:51 +0200
+
+kamailio (5.1.4-1) unstable; urgency=medium
+
+  * New upstream version 5.1.4
+  * control: fix extended-description-line-too-long warning
+
+ -- Victor Seva <vseva@debian.org>  Wed, 06 Jun 2018 09:49:42 +0200
+
+kamailio (5.1.3-1) unstable; urgency=medium
+
+  * New upstream version 5.1.3
+  * remove already applied patches
+
+ -- Victor Seva <vseva@debian.org>  Thu, 17 May 2018 18:03:31 +0200
+
+kamailio (5.1.2-2) unstable; urgency=medium
+
+  * remove kamailio-java-modules (closes: #892538, #893701)
+
+ -- Victor Seva <vseva@debian.org>  Thu, 22 Mar 2018 16:38:07 +0100
+
+kamailio (5.1.2-1) unstable; urgency=medium
+
+  * New upstream version 5.1.2
+  * refresh upstream patches from 5.1
+
+ -- Victor Seva <vseva@debian.org>  Tue, 06 Mar 2018 10:05:17 +0100
+
+kamailio (5.1.1-1) unstable; urgency=medium
+
+  [ Victor Seva ]
+  * update Vcs-* to salsa.debian.org
+  * New upstream version 5.1.1 (Closes: #886110)
+  * kamailio.service fix for /run in tmpfs (Closes: #837678)
+  * update upstream fixes from 5.1 branch
+  * fix debian-control-has-obsolete-dbg-package
+  * build-depends-on-obsolete-package build-depends
+  * fix debian-rules-parses-dpkg-parsechangelog
+  * fix debian-rules-sets-dpkg-architecture-variable
+  * fix wildcard-matches-nothing-in-dep5-copyright src/core/
+  * fix wildcard-matches-nothing-in-dep5-copyright modules/usrloc/ul_rpc.*
+  * fix debian-watch-uses-insecure-uri
+  * fix lintian warnings
+  * fix missing examples
+
+  [ Guillem Jover ]
+  * Wait for kamailio to exit before returning on sysvinit stop action
+    (Closes: #889745)
+
+ -- Victor Seva <vseva@debian.org>  Wed, 07 Feb 2018 18:03:02 +0100
+
+kamailio (5.1.0-1) unstable; urgency=medium
+
+  * New upstream version 5.1.0
+  * update backports scripts
+  * new packages from 5.1.0
+  * rules: remove usr/local from kamailio package
+  * upstream fixes from 5.1 branch
+
+ -- Victor Seva <vseva@debian.org>  Thu, 14 Dec 2017 19:20:49 +0100
+
+kamailio (5.0.4-1) unstable; urgency=medium
+
+  * [767c033] New upstream version 5.0.4
+
+ -- Victor Seva <vseva@debian.org>  Thu, 26 Oct 2017 09:19:06 +0200
+
+kamailio (5.0.3-1) unstable; urgency=medium
+
+  * [384a20d] New upstream version 5.0.3
+
+ -- Victor Seva <vseva@debian.org>  Sun, 01 Oct 2017 12:47:02 +0200
+
+kamailio (5.0.2-2) unstable; urgency=medium
+
+  * [66caa28] fix LIBDIR (Closes:#868270)
+
+ -- Victor Seva <vseva@debian.org>  Fri, 28 Jul 2017 12:36:08 +0200
+
+kamailio (5.0.2-1) unstable; urgency=medium
+
+  * [08870e2] New upstream version 5.0.0
+  * [39e76f7] New upstream version 5.0.1
+  * [d488c00] update debian copyright
+  * [40bf66b] remove purple module
+  * [34cc1c9] update descriptions and add new modules
+  * [36254e2] remove already applied patches
+  * [6289654] New upstream version 5.0.2
+  * [39af62d] refresh debian patches
+  * [a56ccda] set LIBDIR for all rules
+
+ -- Victor Seva <vseva@debian.org>  Mon, 19 Jun 2017 09:04:29 +0200
+
+kamailio (4.4.4-3) unstable; urgency=medium
+
+  * [5e65291] tls: fix init checks (Closes: #844548)
+
+ -- Victor Seva <vseva@debian.org>  Fri, 31 Mar 2017 15:44:17 +0200
+
+kamailio (4.4.4-2) unstable; urgency=medium
+
+  * [622e541] add missing dependency (Closes: #852905)
+
+ -- Victor Seva <vseva@debian.org>  Mon, 30 Jan 2017 19:11:36 +0100
+
+kamailio (4.4.4-1) unstable; urgency=medium
+
+  * [b7185c8] remove dsnsec module (Closes: #843477)
+  * [74f07b7] New upstream version 4.4.4
+  * [5c164a6] remove upstream patches already merged
+
+ -- Victor Seva <vseva@debian.org>  Wed, 09 Nov 2016 17:40:45 +0100
+
+kamailio (4.4.3-2) unstable; urgency=medium
+
+  * [e14ae9f] update upstream fixes from 4.4 branch (Closes: #828361)
+  * [120b3f0] debian/control: wrap-and-sort -sat
+  * [da95604] add lsb-base as dependency for kamailio
+  * [d0cd62a] update Standards-Version to 3.9.8 ( no changes needed )
+  * [6b2f2c4] update lintian-overrides
+
+ -- Victor Seva <vseva@debian.org>  Thu, 27 Oct 2016 17:51:44 +0200
+
+kamailio (4.4.3-1) unstable; urgency=medium
+
+  * [6f08a2b] use default-mysql-* metapackages
+  * [a1c49be] New upstream version 4.4.3
+  * [d6f6df9] remove creation of obsolete radius seqfile (Closes: #83736)
+  * [516952a] update upstream patches from 4.4 since 4.4.3
+
+ -- Victor Seva <vseva@debian.org>  Mon, 19 Sep 2016 09:38:26 +0200
+
+kamailio (4.4.2-3) unstable; urgency=medium
+
+  * [93e246e] exclude kazoo modules from non linux archs
+  * [e102957] add upstream fixes from 4.4 branch since 4.4.2
+
+ -- Victor Seva <vseva@debian.org>  Tue, 12 Jul 2016 14:12:53 +0200
+
+kamailio (4.4.2-2) unstable; urgency=medium
+
+  * [fd4e57f] exclude json modules from non linux archs
+
+ -- Victor Seva <vseva@debian.org>  Thu, 30 Jun 2016 17:08:03 +0200
+
+kamailio (4.4.2-1) unstable; urgency=medium
+
+  * [fad3987] fix build template for group modules
+  * [52adb13] Imported Upstream version 4.4.2
+  * [65aae02] mention that http_client is included at
+    kamailio-utils-modules package
+  * [f275434] set linux-any for json modules
+
+ -- Victor Seva <vseva@debian.org>  Wed, 29 Jun 2016 17:39:48 +0200
+
+kamailio (4.4.1-1) unstable; urgency=medium
+
+  * [4b7bf4b] Imported Upstream version 4.4.1
+  * [a835c6c] remove already applied upstream patches
+  * [774f7d4] use radcli lib for radius (Closes: #822338)
+
+ -- Victor Seva <vseva@debian.org>  Wed, 11 May 2016 14:20:52 +0200
+
+kamailio (4.4.0-3) unstable; urgency=medium
+
+  * [80d8989] update upstream patches from 4.4 branch
+  * [1065be0] debian/patches/series: update missing patches
+
+ -- Victor Seva <vseva@debian.org>  Mon, 25 Apr 2016 11:29:15 +0200
+
+kamailio (4.4.0-2) unstable; urgency=medium
+
+  * [84116d4] add upstream fixes. (Closes: #821039)
+
+ -- Victor Seva <vseva@debian.org>  Fri, 15 Apr 2016 09:33:53 +0200
+
+kamailio (4.4.0-1) unstable; urgency=medium
+
+  * [5cc268d] Imported Upstream version 4.4.0
+  * [d3ea166] remove upstream patches from 4.3 branch
+  * [9463fb4] add upstream patches from 4.4 branch
+  * [4d45250] remove no_tls_certs_generate.patch already applied on 4.4 branch
+
+ -- Victor Seva <vseva@debian.org>  Mon, 04 Apr 2016 18:40:06 +0200
+
+kamailio (4.3.5-2) unstable; urgency=medium
+
+  * [e5b08dd] mono: remove support for powerpc
+  * [9d9559a] add upstream fixes from 4.3 branch
+  * [f86bdc5] update Standards-Version, no changes needed
+  * [ba4c66c] update Vcs-* fields to https ( fix lintian warning )
+
+ -- Victor Seva <vseva@debian.org>  Wed, 16 Mar 2016 15:40:16 +0100
+
+kamailio (4.3.5-1) unstable; urgency=medium
+
+  * [198e0d7] fix typo at erlang module short description (Closes: #816235)
+  * [9301014] Imported Upstream version 4.3.5
+  * [58f5cfe] use my DD account \o/
+  * [c7f3947] remove already applied upstream patches
+
+ -- Victor Seva <vseva@debian.org>  Sun, 06 Mar 2016 19:54:59 +0100
+
+kamailio (4.3.4-2) unstable; urgency=medium
+
+  * [4c50b06] add upstream fixes for 4.3 branch (Closes: #815178)
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Tue, 23 Feb 2016 07:52:30 +0100
+
+kamailio (4.3.4-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Refresh list of architectures supported by Mono (Closes: #808481)
+
+ -- Jo Shields <directhex@apebox.org>  Mon, 21 Dec 2015 10:14:23 +0000
+
+kamailio (4.3.4-1) unstable; urgency=medium
+
+  * [3ca01af] Imported Upstream version 4.3.4 ( Closes: #806244 )
+  * [9702243] remove applied upstream patches
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Thu, 26 Nov 2015 22:06:45 +0100
+
+kamailio (4.3.3-3) unstable; urgency=medium
+
+  * [c615681] upstream patch for mips FTBFS ( Closes: #804749 )
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Wed, 11 Nov 2015 09:23:50 +0100
+
+kamailio (4.3.3-2) unstable; urgency=medium
+
+  * [dd21fe3] add upstream fixes from 4.3 branch (Closes: #804422 #804276)
+  * [592ea26] add systemd .service file and dh-systemd commands
+  * [207459f] allow virtual-mysql-client as valid
+              Depends for kamailio-mysql-modules
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Tue, 10 Nov 2015 11:44:28 +0100
+
+kamailio (4.3.3-1) unstable; urgency=medium
+
+  * [5dad250] Imported Upstream version 4.3.3
+  * [cd88d69] refresh upstream patches since 4.3.3
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Tue, 13 Oct 2015 12:22:53 +0200
+
+kamailio (4.3.1-2) unstable; urgency=medium
+
+  * [3c416e8] add kamcmd patch for reproducible builds
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Wed, 12 Aug 2015 08:46:43 +0200
+
+kamailio (4.3.1-1) unstable; urgency=medium
+
+  * [74a6255] kamailio.init: use NAME and chown HOMEDIR just after create it
+  * [9af988a] Imported Upstream version 4.3.1
+  * [95a4304] remove already applied upstream patches
+  * [f155ce3] refresh debian patches
+  * [60a7dd9] upstream patch supporting repoducible builds
+  * [198047d] remove auto-generated tls certs
+  * [33b7028] add upstream fixes
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Tue, 11 Aug 2015 13:30:43 +0200
+
+kamailio (4.3.0-1) unstable; urgency=medium
+
+  * [45ed887] Imported Upstream version 4.3.0
+  * [c2d68d8] add upstream patches from 4.3 branch
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Sat, 27 Jun 2015 14:57:38 +0200
+
+kamailio (4.3.0~rc0-1) experimental; urgency=medium
+
+  * [bfe18eb] Imported Upstream version 4.3.0~rc0
+  * [6dba838] add new modules on 4.3
+  * [a395fc4] update default private memory to 8Mb
+  * [0bb4a0c] add new modules to rules and update FLAGS
+  * [aa29319] debian/patches: remove applied patches upstream
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Fri, 29 May 2015 11:52:15 +0200
+
+kamailio (4.2.5-1) unstable; urgency=medium
+
+  * [a1f426d] Imported Upstream version 4.2.5
+  * [5cfb580] fix FTBFS on powerpcspe because of AltiVec assumption.
+    Thanks to Roland Stigge <stigge@antcom.de> (Closes: #729635)
+  * [a10699c] set Architecture: any when possible
+  * [58c114b] set Architecture: linux-any for sctp related
+  * [4ac4845] add powerpcspe to the list of architectures supported by mono module
+  * [bc35a5c] kamailio-berkeley-modules: fix lintian warning for empty dir
+  * [953678a] debian/control: wrap-and-short and some minor changes to descriptions
+  * [f57bbbb] debian/patches: add fix_manpage.patch fixing lintian warnings
+  * [8670eb9] debian/copyright: fix lintian warning
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Tue, 19 May 2015 22:29:42 +0200
+
+kamailio (4.2.4-1) unstable; urgency=medium
+
+  * [280cb6a] Imported Upstream version 4.2.1
+  * [9fb944e] Imported Upstream version 4.2.4 (Closes: 783946)
+  * [0241997] exclude obsoleted and ser examples (Closes: #772314)
+  * [a295c13] update Standards-Version to 3.9.6
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Sun, 03 May 2015 10:19:54 +0200
+
+kamailio (4.2.0-2) unstable; urgency=medium
+
+  * [d614569] fix fifo and ctl defaults pointing to unsecure /tmp dir
+    Closes: #775681
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Wed, 28 Jan 2015 20:43:44 +0100
+
+kamailio (4.2.0-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix FTBFS on mipsel and mips.
+    Add mips/mipsel arch in debian/control.
+    Disable the Mono module on mips in debian/rules (like it is on ia64).
+    Add fix-mips.patch Patch by Dejan Latinovic <Dejan.Latinovic@imgtec.com>
+    Closes: #767500.
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Thu, 13 Nov 2014 10:48:28 +0000
+
+kamailio (4.2.0-1) unstable; urgency=medium
+
+  * [8774ae4] Imported Upstream version 4.2.0
+  * [188e33e] add extra modules
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Tue, 21 Oct 2014 23:16:39 +0200
+
+kamailio (4.1.5-1) unstable; urgency=medium
+
+  * [ee9aba2] Imported Upstream version 4.1.5
+  * [fb02772] remove applied upstream patches
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Sun, 10 Aug 2014 09:14:31 +0200
+
+kamailio (4.1.4-1) unstable; urgency=medium
+
+  * [b22c478] Imported Upstream version 4.1.4
+  * [77a1c35] update upstream patches from 4.1.4 (Closes: #750079)
+  * [76f1000] Use gcj-jdk (Closes: #750831)
+  * [041d18f] update backports scripts
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Sun, 15 Jun 2014 10:57:16 +0200
+
+kamailio (4.1.3-2) unstable; urgency=medium
+
+  * [f3ecc41] Append pkg-config as Build-Depends (Closes: #747787)
+  * [256c082] Add upstream patches
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Mon, 12 May 2014 23:01:40 +0200
+
+kamailio (4.1.3-1) unstable; urgency=medium
+
+  * [b01b8f5] replace libjson0-dev with libjson-c-dev. (Closes: #745005)
+  * [599b843] remove pkg dir from sources
+  * [62ea52e] add debian gdb.conf
+  * [4aba97f] Imported Upstream version 4.1.3
+  * [5e11caa] debian/backports: use old libjson0-dev when necessary
+  * [e4b2607] debian/patches: remove applied upstream patches
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Fri, 25 Apr 2014 10:00:29 +0200
+
+kamailio (4.1.2-2) unstable; urgency=medium
+
+  * [df4c597] remove sparc from the list of supported arch
+  * [414c743] Add upstream patches
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Tue, 25 Mar 2014 20:54:25 +0100
+
+kamailio (4.1.2-1) unstable; urgency=medium
+
+  * [18bf501] Imported Upstream version 4.1.2
+  * [2472eed] fix init typo. Thanks to Corey Edwards.
+  * [5dfc30d] removed previous upstream patches and old debian patches
+  * [c60b687] clean lintian overrides
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Mon, 10 Mar 2014 11:55:33 +0100
+
+kamailio (4.1.1-4) unstable; urgency=low
+
+  [ Victor Seva ]
+  * fix init script
+  * use freeradius-client. (Closes: #739286)
+  * new vars to configure shared and private memory
+    and path for the configuration file.
+
+  [ Tzafrir Cohen ]
+  * Save autover.h at clean to allow a clean git buildpackage.
+
+ -- Tzafrir Cohen <tzafrir@debian.org>  Wed, 26 Feb 2014 08:36:12 +0200
+
+kamailio (4.1.1-2) unstable; urgency=medium
+
+  * fix typo on kamailio-java-modules dependences. (Closes: #736212)
+  * do not try to build mono on excluded architectures.
+  * use db-utils from db-defaults.
+  * add Provides sip-router and add
+    stun-server | turn-server to Suggests. (Closes: #737760)
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Fri, 07 Feb 2014 10:45:50 +0100
+
+kamailio (4.1.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/patches:
+    - add upstream fixes
+  * Added tls outbound websocket autheph dnssec modules
+    - openssl exception added to their license
+  * removing sparc and ia64 from supported archs
+    for mono module (Closes: #728915)
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Mon, 06 Jan 2014 11:47:13 +0100
+
+kamailio (4.0.4-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/patches:
+    - remove applied patches
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Thu, 03 Oct 2013 10:14:41 +0200
+
+kamailio (4.0.3-2) unstable; urgency=low
+
+  * fix init script exit status
+  * debian/patches/upstream:
+    - add upstream fixes
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Fri, 06 Sep 2013 11:42:07 +0200
+
+kamailio (4.0.3-1) unstable; urgency=low
+
+  [ Victor Seva ]
+  * New upstream release
+  * debian/control:
+    - change vcs info to our git repository
+    - add sqlite3 Recommends on sqlite-modules (Close: #715230)
+    - change Architecture to linux-any (Close: #712182)
+  * debian/patches/default_fifo.patch:
+    - fix kamctlrc defaults
+  * debian/patches/spelling_errors.patch:
+    - fix spelling errors on binaries
+  * debian/rules:
+    - use upstream CC_EXTRA_OPTS and LD_EXTRA_OPTS environment variables
+      to pass hardening flags (Close: #690396)
+  * debian/kamailio.init:
+    - use lsb init-functions
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Tue, 20 Aug 2013 11:45:03 +0200
+
+kamailio (4.0.2-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/rules:
+    - changed depends for build-arch and build-indep rules
+      to build-stamp (Closes: #707038)
+    - added quiet=verbose as suggested by
+      Matthias Klose <doko@debian.org>
+  * Added debian/patches/default_fifo.patch (Closes: #712083)
+    - use /var/run/kamailio/ dir instead of /tmp for fifo
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Thu, 13 Jun 2013 09:05:39 +0200
+
+kamailio (4.0.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #704118)
+  * debian/control.tls
+    + refreshed (Closes: #704683)
+    + added new websocket and outbound modules
+  * debian/control:
+    + added new ims modules
+    + remove openser stuff
+  * debian/rules:
+    + kambdb_recover binary is not in source.
+    + added ims module
+  * debian/patches/upstream:
+    + removed upstream fixes for the previous release.
+  * debian/patches:
+    + removed plumb_md5.patch and plumb_md5_fixes.patch
+      merged upstream ( Thanks miconda )
+    + arm_fix.patch applied upstream (Closes: #690388)
+      Thanks Matthias Klose <doko@debian.org>
+  * debian/backports/squeeze:
+    + remove call to dpkg-buildflags
+    + do not apply hardening_flags.patch
+  * debian/copyright:
+    + updated modules path
+
+ -- Victor Seva <linuxmaniac@torreviejawireless.org>  Mon, 29 Apr 2013 11:34:47 +0200
+
+kamailio (3.3.0-1) unstable; urgency=low
+
+  [ Julien BLACHE ]
+  * OpenSER has been renamed to Kamailio (closes: #527615).
+    + s/openser/kamailio/ pretty much everywhere.
+  * debian/control:
+    + Add transitional openser* packages.
+    + Remove myself from Uploaders.
+    + Move openser-dbg and kamailio-dbg to debug section.
+
+  [ Henning Westerholt ]
+  * finish renaming from openser to kamailio started from Julien Blache
+  * merge upstream changes in packaging scripts
+  * debian/control:
+    + add new modules with dependencies
+    + fix description for radius package
+    + add python to kamailio dependencies to fix lintian error
+    + add myself to Uploaders
+  * debian/kamailio.default:
+    + extend description in kamailio.default
+  * debian/kamailio.init:
+    + add example core dump directory setting to init file
+    + small reformatting in init file, mostly whitespace changes
+    + fix small error in package name definition
+  * debian/kamailio.README.Debian:
+    + add a note about upgrades from a previous OpenSER version
+    + provide links to the upstream upgrade guide
+  * debian/kamailio.dirs:
+    + its not necessary to create /var/run/kamailio in the package,
+      adduser should do this in the postinst script
+  * debian/kamailio.preinst, debian/kamailio-radius-modules.preinst:
+    + add preinst helper scripts to help upgrade from openser
+
+  [ Victor Seva ]
+  * New upstream release
+  * debian/rules:
+    + replaced for the kamailio debian/rules.
+    + fix get-orig-source. Update URL
+    + change UPVERSION initialitation. Now bpo versions works too
+    + fix modules cleanup install.
+  * Switch to dpkg-source 3.0 (quilt) format
+  * debian/control:
+    + remove dpatch
+    + add myself as Uploader
+    + add ${misc:Depends} to all binary packages (lintian suggestion)
+    + multiarch support.
+  * debian/patches:
+    + remove all patches.
+    + added upstream fixes.
+    + no_lib64_on_64_bits.patch ( used on squeeze backport)
+    + multiarch_support.patch
+    + added no_INSTALL_file.patch
+  * debian/watch updated
+  * debian/kamailio.init:
+    + add $remote_fs (lintian suggestion)
+  * debian/copyright
+    + using copyright-format/1.0/
+  * debian/backports
+    + added squeeze script
+
+  [ Tzafrir Cohen ]
+  * Make sure hardening *FLAGS make it through the build system:
+    - hardening_flags.patch: get them through.
+    - Use buildflags.mk from dpkg-dev (and require 1.16.1.1).
+    - fix_export.patch - Related(?) link issue.
+  * Rebuild kambdb_recover that is shiped in the source.
+  * Package kamailio-berkeley-bin for kambdb_recover.
+  * Bump standards version to 3.9.3 while we're at it.
+  * plumb_md5.patch and plumb_md5_fixes.patch: avoid the RSA md5 code.
+  * Simpler editing of the defaults file: remmed-out by default.
+  * Removed unneeded manual library dependencies.
+
+ -- Tzafrir Cohen <tzafrir@debian.org>  Sat, 30 Jun 2012 14:18:32 +0300
+
+openser (1.3.2-3) unstable; urgency=low
+
+  * debian/patches/12_acc_enable_radius.dpatch:
+    + Updated; disable RADIUS support for the acc module in the sample config
+      file, otherwise the module fails to initialize and OpenSER can't start
+      (closes: #491705).
+
+ -- Julien BLACHE <jblache@debian.org>  Mon, 21 Jul 2008 22:34:44 +0200
+
+openser (1.3.2-2) unstable; urgency=low
+
+  * debian/control:
+    + Fix capitalization here and there (closes: #483753).
+    + Bump Standards-Version to 3.8.0 (no changes).
+
+ -- Julien BLACHE <jblache@debian.org>  Sat, 07 Jun 2008 12:20:27 +0200
+
+openser (1.3.2-1) unstable; urgency=low
+
+  [ Julien BLACHE ]
+  * New upstream release.
+  * debian/control, debian/rules, openser-osp-module.examples:
+    + Add osp module, disabled by default in Debian due to OpenSSL license
+      issues.
+  * openser.README.Debian:
+    + Add instructions to build the TLS variant and the OSP module.
+  * debian/patches/01_Makefile_fixes.dpatch:
+    + Removed; merged upstream.
+
+  [ Patrick Matthäi ]
+  * debian/control:
+    + We do not need to conflict on older binary versions at openser-dbg while
+      we still depend on the right version.
+  * debian/control, debian/rules:
+    + Removed some useless whitespaces at EOL.
+
+ -- Julien BLACHE <jblache@debian.org>  Sun, 18 May 2008 11:19:28 +0200
+
+openser (1.3.1-3) unstable; urgency=low
+
+  [ Julien BLACHE ]
+  * debian/openser.init:
+    + Add more services dependencies to the LSB header.
+
+  [ Victor Seva ]
+  * debian/openser.init: (Closes: #470535)
+    - Fixed a bug in creating necessary $HOMEDIR
+      Thanks to Marcos Hack for the hint and fix.
+      Thanks to Stefan Ebner <hellboy195@gmail.com>
+
+ -- Julien BLACHE <jblache@debian.org>  Sat, 05 Apr 2008 17:21:41 +0200
+
+openser (1.3.1-2) unstable; urgency=low
+
+  * debian/openser.init:
+    + Fix echo -e bashism (closes: #472896).
+
+ -- Julien BLACHE <jblache@debian.org>  Fri, 28 Mar 2008 22:54:41 +0100
+
+openser (1.3.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches/01_fix_openser_cfg.dpatch:
+    + Removed; merged upstream.
+  * debian/patches/02_uac_fix_avp_parsing.dpatch:
+    + Removed; merged upstream.
+  * debian/patches/03_allow_empty_transformations.dpatch:
+    + Removed; merged upstream.
+  * debian/patches/04_perl_for_perl5.10.dpatch:
+    + Removed; merged upstream.
+  * debian/patches/01_Makefile_fixes.dpatch:
+    + Added; fix a typo in top-level Makefile.
+
+ -- Julien BLACHE <jblache@debian.org>  Wed, 12 Mar 2008 22:43:58 +0100
+
+openser (1.3.0-3) unstable; urgency=low
+
+  * debian/patches/04_perl_for_perl5.10.dpatch:
+    + Added; from upstream trunk r3742, fix perl module build with
+      perl 5.10 (closes: #466881).
+  * debian/copyright:
+    + Fix copyright notice.
+  * debian/control:
+    + Build-Depend on libdb-dev (>= 4.6.19) instead of libdb-dev (>= 4.6.19-1).
+
+ -- Julien BLACHE <jblache@debian.org>  Sat, 01 Mar 2008 20:36:31 +0100
+
+openser (1.3.0-2) unstable; urgency=low
+
+  * debian/patches/01_fix_openser_cfg.dpatch:
+    + Added; fix default openser.cfg, from rev 3376.
+  * debian/patches/02_uac_fix_avp_parsing.dpatch:
+    + Added; fix avp defintion parsing in the uac module, from rev 3414.
+  * debian/patches/03_allow_empty_transformations.dpatch:
+    + Added; allow some transformations to accept an empty buffer, from
+      rev 3436.
+
+ -- Julien BLACHE <jblache@debian.org>  Sun, 23 Dec 2007 14:42:55 +0100
+
+openser (1.3.0-1) experimental; urgency=low
+
+  * New upstream release.
+    + Adds new variable $adu to make it easier to check the auth digest URI
+      matches the To/R-URI; in response to CVE-2007-5469 (closes: #446956).
+  * debian/control:
+    + Add build-dependency on libcurl4-gnutls-dev.
+  * debian/rules:
+    + Add the xcap_client module in openser-presence-modules.
+
+ -- Julien BLACHE <jblache@debian.org>  Thu, 13 Dec 2007 17:47:34 +0100
+
+openser (1.3.0~svn20071212-1) experimental; urgency=low
+
+  * New SVN snapshot.
+  * debian/control:
+    + Rename openser-module-perl to openser-modules-perl and update the
+      description for the additional perlvdb module.
+    + Add openser-ldap-modules.
+  * debian/rules:
+    + Build the perlvdb module and install it.
+    + Add LDAP modules.
+
+ -- Julien BLACHE <jblache@debian.org>  Wed, 12 Dec 2007 17:01:19 +0100
+
+openser (1.3.0~svn20071207-1) experimental; urgency=low
+
+  * New SVN snapshot.
+  * debian/patches/12_acc_enable_radius.dpatch:
+    + Added; enable RADIUS accounting in the acc module. This effectively
+      pulls in libradiusclient-ng2 as a dependency of the main openser package,
+      but that dependency should go away in a future OpenSER release (closes: #454660).
+  * debian/control:
+    + Bump Standards-Version to 3.7.3 (no changes).
+
+ -- Julien BLACHE <jblache@debian.org>  Fri, 07 Dec 2007 13:24:24 +0100
+
+openser (1.3.0~svn20071129-1) experimental; urgency=low
+
+  * New SVN snapshot.
+  * debian/patches/12_kfreebsd_support.dpatch:
+    + Removed; merged upstream.
+
+ -- Julien BLACHE <jblache@debian.org>  Thu, 29 Nov 2007 21:37:28 +0100
+
+openser (1.3.0~svn20071115-3) experimental; urgency=low
+
+  * debian/control:
+    + openser-berkeley-module needs dbX.Y-util.
+  * debian/patches/12_kfreebsd_support.dpatch:
+    + Added; add kfreebsd support to the build system.
+
+ -- Julien BLACHE <jblache@debian.org>  Wed, 28 Nov 2007 17:52:32 +0100
+
+openser (1.3.0~svn20071115-2) experimental; urgency=low
+
+  * debian/rules:
+    + Force CFLAGS for the bdb_recover build, too (closes: #451908).
+
+ -- Julien BLACHE <jblache@debian.org>  Mon, 19 Nov 2007 10:56:18 +0100
+
+openser (1.3.0~svn20071115-1) experimental; urgency=low
+
+  * OpenSER 1.3.0 packaging pre-release.
+
+  * debian/patches/01_psql_connect.dpatch:
+    + Removed; merged upstream.
+  * debian/patches/02_xmlrpc_update.dpatch:
+    + Removed; merged upstream.
+  * debian/control:
+    + New packages: openser-carrierroute-module, openser-berkeley-module.
+    + openser Suggests both new packages.
+    + Add Build-Dependencies on xsltproc, libconfuse-dev and libdb-dev.
+  * debian/rules:
+    + Update list of presence modules.
+    + Add the carrierroute and berkeley modules.
+    + Build db schemas and bdb utils.
+    + Install openser documentation.
+
+ -- Julien BLACHE <jblache@debian.org>  Thu, 15 Nov 2007 16:19:18 +0100
+
+openser (1.2.2-3) unstable; urgency=low
+
+  * debian/patches/02_xmlrpc_update.dpatch:
+    + Added; Backported from trunk rev 2870, update mi_xmlrpc code for newer
+      libxmlrpc versions (closes: #445111).
+
+ -- Julien BLACHE <jblache@debian.org>  Sat, 06 Oct 2007 12:04:46 +0200
+
+openser (1.2.2-2) unstable; urgency=low
+
+  [ Julien BLACHE ]
+  * debian/patches/01_psql_connect.dpatch:
+    + Added; Fix postgresql failure, from SVN (closes: #441960).
+
+  [ Kilian Krause ]
+  * Add dpkg-dev (>= 1.13.19) to Build-Depends for binary:Version
+  * Update Maintainer to Debian VoIP Team
+  * Add myself to Uploaders.
+
+ -- Julien BLACHE <jblache@debian.org>  Wed, 12 Sep 2007 12:09:35 +0200
+
+openser (1.2.2-1) unstable; urgency=low
+
+  * New upstream release.
+    + Presence module users need to upgrade their database schema, see release
+      notes for details.
+
+ -- Julien BLACHE <jblache@debian.org>  Thu, 16 Aug 2007 18:04:41 +0200
+
+openser (1.2.1-2) unstable; urgency=low
+
+  * debian/control:
+    + Use ${binary:Version} instead of ${Source-Version}.
+  * debian/rules:
+    + Do not ignore make proper errors.
+
+ -- Julien BLACHE <jblache@debian.org>  Sun, 05 Aug 2007 20:46:22 +0200
+
+openser (1.2.1-1) unstable; urgency=low
+
+  * debian/control:
+    + Build-Depend on libsnmp-dev instead of libsnmp10-dev.
+  * debian/rules:
+    + Build at -O2 on arm again, now that #390694 is fixed.
+  * debian/openser.init:
+    + Create /var/run/openser if it doesn't exist.
+    + Add status support, patch from Henning Westerholt
+      <henning.westerholt@1und1.de>.
+  * debian/openser.dirs:
+    + Added; add /var/run/openser to the package.
+  * debian/openser.examples:
+    + Install the whole examples/ directory.
+  * debian/patches/20_usrloc_lockset_fixes.dpatch:
+    + Removed; from upstream SVN.
+  * debian/patches/21_pua_lock_fix.dpatch:
+    + Removed; from upstream SVN.
+  * debian/patches/22_perl_sysv_sem.dpatch:
+    + Removed; merged upstream.
+
+ -- Julien BLACHE <jblache@debian.org>  Thu, 24 May 2007 15:31:21 +0200
+
+openser (1.2.0-4) unstable; urgency=low
+
+  * debian/patches/21_pua_lock_fix.dpatch:
+    + Added; fix typo in modules/pua/hash.c.
+  * debian/patches/22_perl_sysv_sem.dpatch:
+    + Added; fix perl module build with USE_SYSV_SEM.
+
+ -- Julien BLACHE <jblache@debian.org>  Wed, 25 Apr 2007 18:01:06 +0200
+
+openser (1.2.0-3) unstable; urgency=low
+
+  * debian/patches/20_usrloc_lockset_fixes.dpatch:
+    + Added; fix the usrloc module when not using fast locks.
+
+ -- Julien BLACHE <jblache@debian.org>  Sun, 22 Apr 2007 15:18:25 +0200
+
+openser (1.2.0-2) unstable; urgency=low
+
+  * debian/openser.init:
+    + exit 0 if fork=no is specified.
+  * debian/control:
+    + Build-Depend on libsnmp10-dev.
+
+ -- Julien BLACHE <jblache@debian.org>  Sat, 21 Apr 2007 11:33:02 +0200
+
+openser (1.2.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Source: use the OpenSER TLS tarball
+
+  * debian/control:
+    + New packages: openser-presence-modules, openser-xmlrpc-module,
+      openser-perl-module, openser-snmpstats-module, openser-xmpp-module
+      (split from the -jabber-module package).
+    + Build-Depends: libxmlrpc-c3-dev, libperl-dev, libsnmp9-dev.
+  * debian/rules:
+    + Always build the non-TLS flavour for Debian builds.
+    + Add the new modules.
+  * debian/openser.init:
+    + Print out error messages if openser fails to start.
+    + No longer needs to be run as root to dump core.
+  * debian/patches/01_sourced_scripts.dpatch:
+    + Removed; merged upstream.
+  * debian/patches/02_openser.cfg.dpatch:
+    + Removed; no longer needed.
+  * debian/patches/12_fail_on_build_failure.dpatch:
+    + Removed; merged upstream.
+  * debian/patches/22_OpenPKG-SA-2006.042.dpatch:
+    + Removed; fixed upstream (different fix).
+
+ -- Julien BLACHE <jblache@debian.org>  Tue, 13 Mar 2007 17:00:58 +0100
+
+openser (1.1.1-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+  * debian/patches/21_arm_register_overlap.dpatch:
+    + Removed; Merged upstream.
+  * debian/patches/20_pdt_domains.c_lockfix.dpatch:
+    + Removed; Merged upstream.
+
+ -- Julien BLACHE <jblache@debian.org>  Fri, 26 Jan 2007 16:58:48 +0100
+
+openser (1.1.0-9) unstable; urgency=medium
+
+  * debian/rules:
+    + Fix sed substitution pattern to properly get rid of the PATH variable
+      in the openserctl, openser_mysql and openser_postgresql scripts.
+
+ -- Julien BLACHE <jblache@debian.org>  Fri, 12 Jan 2007 15:20:26 +0100
+
+openser (1.1.0-8) unstable; urgency=high
+
+  * debian/patches/22_OpenPKG-SA-2006.042.dpatch:
+    + Added; security fix for OpenPKG-SA-2006.042 (closes: #404591).
+
+ -- Julien BLACHE <jblache@debian.org>  Tue, 26 Dec 2006 22:13:26 +0100
+
+openser (1.1.0-7) unstable; urgency=low
+
+  * Sync packaging fixes from upstream CVS.
+  * debian/control:
+    + Fix wrong RFC number in description (3621 vs. 3261), spotted by Dan Pascu.
+  * debian/rules:
+    + Add avp_radius to RADIUS_MODULES, from Bogdan-Andrei Iancu.
+
+ -- Julien BLACHE <jblache@debian.org>  Fri,  3 Nov 2006 13:35:18 +0100
+
+openser (1.1.0-6) unstable; urgency=low
+
+  * debian/patches/21_arm_register_overlap.dpatch:
+    + Added; fix register overlap on arm (closes: #393858).
+
+ -- Julien BLACHE <jblache@debian.org>  Sun, 22 Oct 2006 19:32:55 +0200
+
+openser (1.1.0-5) unstable; urgency=low
+
+  * debian/patches/20_20_pdt_domains.c_lockfix.dpatch:
+    + Added; fix typo in modules/pdt/domains.c:306.
+
+ -- Julien BLACHE <jblache@debian.org>  Sun,  8 Oct 2006 19:20:35 +0200
+
+openser (1.1.0-4) unstable; urgency=low
+
+  * debian/control:
+    + openser-dbg is Priority: extra.
+  * debian/patches/12_fail_on_build_failure.dpatch:
+    + Added; abort the build if a module fails to build.
+  * debian/rules:
+    + Temporarily decrease optimisation on arm (closes: #390005).
+
+ -- Julien BLACHE <jblache@debian.org>  Sun,  8 Oct 2006 12:11:55 +0200
+
+openser (1.1.0-3) unstable; urgency=low
+
+  * debian/rules:
+    + Remove DH_COMPAT 4 compatibility code which was introduced only for
+      Sarge backward-compatiblity in the upstream CVS; there's now a
+      packaging directory dedicated to Sarge.
+  * debian/control:
+    + Build-Depends cleanup.
+  * debian/patches/02_openser.cfg.dpatch:
+    + Remove the C-style comment block containing fork=no, otherwise the
+      default config file will trigger the test for fork=no in the
+      initscript (closes: #386464).
+  * debian/openser.README.Debian:
+    + Document initscript behaviour wrt fork=no.
+  * debian/openser.init:
+    + Add LSB header.
+
+ -- Julien BLACHE <jblache@debian.org>  Fri,  8 Sep 2006 15:04:58 +0200
+
+openser (1.1.0-2) unstable; urgency=low
+
+  * Initial Debian release (closes: #380450).
+
+  * Official Debian builds have no TLS support due to the lack of OpenSSL
+    license exception for OpenSER. Building TLS packages is supported using
+    the upstream TLS tarball with no modifications (you'll need libssl-dev).
+
+  * debian/openser.init:
+    + Do not start OpenSER in the start target if fork=no is specified in
+      the config file, so as to not break the boot process.
+  * debian/rules:
+    + Detect TLS/non-TLS sources, and enable TLS build accordingly.
+    + get-orig-source will fetch the non-TLS version for the official builds.
+    + Emulate debhelper v5 behaviour for debug symbols when build with
+      DH_COMPAT 4 to ease Sarge backports.
+  * debian/control:
+    + Drop build-dependency on libssl-dev for official Debian builds.
+    + Simplify dependencies/conflicts.
+
+ -- Julien BLACHE <jblache@debian.org>  Sun, 30 Jul 2006 15:23:13 +0200
+
+openser (1.1.0-1) unstable; urgency=low
+
+  * New upstream release.
+    + Packaging updated based on Daniel-Constantin's work upstream.
+  * debian/patches/02_postgres_module_build.dpatch:
+    + Removed; merged upstream.
+  * debian/patches/01_ungentooize.dpatch:
+    + Removed; merged upstream.
+  * debian/copyright:
+    + Updated based on upstream's.
+  * debian/openser.postinst:
+    + Change openser group GECOS to "OpenSER".
+  * debian/control:
+    + Rework package descriptions.
+    + Add openser-unixodbc-module package.
+    + Build-Depend on unixodbc-dev.
+  * debian/rules:
+    + Build the unixodbc module.
+  * debian/patches/01_sourced_scripts.dpatch:
+    + Added; remove the shebang line from scripts which aren't meant for
+      direct execution.
+  * debian/patches/10_no_lib64_on_64_bits.dpatch:
+    + Added; use /usr/lib even on 64bit architectures.
+  * debian/patches/11_always_smp.dpatch:
+    + Added; always build an SMP-enabled OpenSER.
+
+ -- Julien BLACHE <jblache@debian.org>  Wed, 12 Jul 2006 14:37:40 +0200
+
+openser (1.0.1-1) unstable; urgency=low
+
+  * Packaging sanitized.
+  * Remove everything debconf-related; setting up an HA cluster is an
+    advanced use of OpenSER which cannot be handled through debconf anyway.
+  * debian/control:
+    + Remove all -tls- packages.
+    + Add missing build-depends: zlib1g-dev, flex, bison.
+    + Build-Depend on libradiusclient-ng-dev, libmysqlclient15-dev.
+    + Packages descriptions rewritten.
+    + Add an openser-dbg package.
+  * debian/rules:
+    + Remove everything related to -tls- packages.
+    + Build with -g -Wall -O2
+  * debian/patches/01_ungetooize.dpatch:
+    + Added; Do not override CFLAGS if set in the environment. Allows building
+      at a rational optimisation level, and passing extra CFLAGS for debugging.
+  * debian/patches/02_postgres_module_build.dpatch:
+    + Added; Remove unneeded architecture restriction for the PostgreSQL module
+      build.
+
+ -- Julien BLACHE <jblache@debian.org>  Fri, 30 Jun 2006 22:22:11 +0200
+
+openser (1.0.1-0) unstable; urgency=low
+
+  * OpenSER v1.0.1 Release.
+
+ -- Daniel-Constantin Mierla <daniel@voice-system.ro>  Mon, 27 Feb 2006 19:23:00 +0200
+
+openser (1.0.0-2) unstable; urgency=low
+
+  * Create a sequence file for use if the radius accounting is enabled,
+    which is guaranteed to be writable by openser no matter what user
+    and group is running as. If radius accounting is used, this can be
+    added in your clients.conf that is used by openser as:
+    seqfile /var/run/openser/openser_radius.seq
+  * Fixed wording in the master_node template description
+
+ -- Dan Pascu <dan@ag-projects.com>  Fri, 03 Feb 2006 20:20:24 +0200
+
+openser (1.0.0-1) unstable; urgency=low
+
+  * Added support for debconf. A number of things can now be configured
+    when installing the package: if to start on boot, the ammount of
+    memory the openser server will use and if to dump core files when
+    the server crashes.
+  * Added support for storing startup options in /etc/default/openser.
+    This file is used by /etc/init.d/openser to setup various startup
+    options which no longer need to be modified in the startup script
+    itself.
+  * Fixed issue with not adding dependency on libradius-ng
+  * Fixed issue with the debian postinst scripts which resulted in the
+    openser system user not being created for the openser-tls package
+  * Fixed issue with some debhelper entries being added twice in the
+    openser postrm and prerm scripts
+  * Fixed issue with the openser system user not having his home
+    directory removed on purge
+  * Fixed a number of typos in the Suggests and Conflicts directives
+    in the debian control file
+  * Up to date with recent bugfixes from upstream
+
+ -- Dan Pascu <dan@ag-projects.com>  Thu, 02 Feb 2006 12:47:41 +0200
+
+openser (1.0.0-0) unstable; urgency=low
+
+  * First Public Release.
+
+ -- Daniel-Constantin Mierla <daniel@voice-system.ro>  Tue, 07 Jun 2005 18:23:19 +0200
+
+
