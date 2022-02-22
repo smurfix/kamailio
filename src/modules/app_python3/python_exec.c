@@ -85,6 +85,12 @@ int apy_exec(sip_msg_t *_msg, char *fname, char *fparam, int emode)
 	_sr_apy_env.msg = _msg;
 	PY_GIL_ENSURE;
 
+	if(PyErr_Occurred()) {
+		python_handle_exception("apy_init: unresolved error!");
+		_sr_apy_env.msg = bmsg;
+		goto err;
+	}
+		
 	pFunc = PyObject_GetAttrString(_sr_apy_handler_obj, fname);
 	if (pFunc == NULL || !PyCallable_Check(pFunc)) {
 		if(emode==1) {
