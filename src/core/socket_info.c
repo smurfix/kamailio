@@ -998,7 +998,7 @@ struct idx
 struct idxlist{
 	struct idx* 	addresses;
 	int 		index;
-	char 		name[MAX_IF_LEN];
+	char 		name[MAX_IF_LEN+1];
 	unsigned 	flags;
 };
 
@@ -1262,7 +1262,7 @@ static int build_iface_list(void)
 						break;
 					case IFA_LABEL:
 						LM_DBG("iface name is %s\n", (char*)RTA_DATA(rtap));
-						strncpy(name, (char*)RTA_DATA(rtap), MAX_IF_LEN-1);
+						strncpy(name, (char*)RTA_DATA(rtap), MAX_IF_LEN);
 						break;
 					case IFA_BROADCAST:
 					case IFA_ANYCAST:
@@ -1280,8 +1280,9 @@ static int build_iface_list(void)
 				}
 			}
 
-			if(strlen(ifaces[index].name)==0 && strlen(name)>0) {
-				strncpy(ifaces[index].name, name, MAX_IF_LEN-1);
+			if(ifaces[index].name[0] == '\0' && name[0] != '\0') {
+				strncpy(ifaces[index].name, name, MAX_IF_LEN);
+				ifaces[index].name[MAX_IF_LEN]='\0';
 			}
 
 			ifaces[index].index = index;
@@ -1468,7 +1469,7 @@ static int fix_hostname(str* name, struct ip_addr* address, str* address_str,
 		PKG_MEM_ERROR;
 		goto error;
 	}
-	strncpy(address_str->s, tmp, strlen(tmp)+1);
+	strcpy(address_str->s, tmp);
 	/* set is_ip (1 if name is an ip address, 0 otherwise) */
 	address_str->len=strlen(tmp);
 	if (sr_auto_aliases && (address_str->len==name->len) &&
