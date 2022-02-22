@@ -861,8 +861,6 @@ install-modules-all: install-every-module install-every-module-doc
 
 
 install-doc: $(doc_prefix)/$(doc_dir) install-every-module-doc
-	$(INSTALL_TOUCH) $(doc_prefix)/$(doc_dir)/INSTALL
-	$(INSTALL_DOC) ../INSTALL $(doc_prefix)/$(doc_dir)
 	$(INSTALL_TOUCH) $(doc_prefix)/$(doc_dir)/README
 	$(INSTALL_DOC) ../README $(doc_prefix)/$(doc_dir)
 
