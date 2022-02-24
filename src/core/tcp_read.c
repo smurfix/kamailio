@@ -1749,6 +1749,10 @@ again:
 				LM_ERR("0 bytes read\n");
 				goto error;
 			}
+			if (unlikely(n!=sizeof(con))){
+				LM_ERR("Not enough bytes read\n");
+				goto error;
+			}
 			if (unlikely(con==0)){
 					LM_CRIT("null pointer\n");
 					goto error;
