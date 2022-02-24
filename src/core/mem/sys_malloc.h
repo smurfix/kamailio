@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Daniel-Constantin Mierla (asipto.com)
+ * Copyright (C) 2021 Matthias Urlichs
  *
  * This file is part of Kamailio, a free SIP server.
  *
@@ -16,32 +16,11 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+/**
+ * \file
+ * \brief Use the system malloc
+ * \ingroup mem
+ */
 
-#ifndef _sr_memcore_h_
-#define _sr_memcore_h_
+#include <memory.h>
 
-/* memory managers implemented in core */
-
-/* system malloc - implemented in sys_malloc.c */
-int sys_malloc_init_pkg_manager(void);
-int sys_malloc_init_shm_manager(void);
-
-#ifdef F_MALLOC
-/* fast malloc - implemented in f_malloc.c */
-int fm_malloc_init_pkg_manager(void);
-int fm_malloc_init_shm_manager(void);
-#endif
-
-#ifdef Q_MALLOC
-/* quick malloc - implemented in q_malloc.c */
-int qm_malloc_init_pkg_manager(void);
-int qm_malloc_init_shm_manager(void);
-#endif
-
-#ifdef TLSF_MALLOC
-/* two levels segregated fit - implemented in tlsf_malloc.c */
-int tlsf_malloc_init_pkg_manager(void);
-int tlsf_malloc_init_shm_manager(void);
-#endif
-
-#endif
