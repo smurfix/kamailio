@@ -53,3 +53,5 @@ libiname.lst
 # compiling tools files
 .clangd
 compile_commands.json
+src/modules/app_perl/kamailioxs.c
+utils/db_berkeley/kambdb_recover
