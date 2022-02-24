@@ -1,0 +1,6 @@
+/files
+/kamailio*/
+/.debhelper/
+/*.debhelper
+/*.log
+/*.substvars
