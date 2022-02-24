@@ -530,7 +530,7 @@ char* pgid_file = 0;
 
 
 /* memory manager */
-#define SR_MEMMNG_DEFAULT	"sm"
+#define SR_MEMMNG_DEFAULT	"qm"
 
 char *sr_memmng_pkg = NULL;
 char *sr_memmng_shm = NULL;
