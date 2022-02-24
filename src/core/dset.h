@@ -218,9 +218,9 @@ inline static int get_request_uri(struct sip_msg* _m, str* _u)
 }
 
 
-#define ruri_mark_new() (ruri_is_new = 1)
+#define ruri_mark_new() do { ruri_is_new = 1; } while(0)
 
-#define ruri_mark_consumed()  (ruri_is_new = 0)
+#define ruri_mark_consumed()  do { ruri_is_new = 0; } while(0)
 
 /** returns whether or not ruri should be used when forking.
   * (useful for serial forking)
