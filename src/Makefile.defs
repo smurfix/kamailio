@@ -113,11 +113,12 @@ EXTRAVERSION =
 # 0 - f_malloc (fast malloc)
 # 1 - q_malloc (quick malloc)
 # 2 - tlsf_malloc (O(1) malloc and free)
+# 3 - sys_malloc (just use the system's malloc)
 MEMMNG ?= 0
 # memory debugger switcher
 # 0 - off (no-debug mode)
 # 1 - on (debug mode)
-MEMDBG ?= 1
+MEMDBG ?= 0
 
 VERSIONVAL = $(shell expr $(VERSION) \* 1000000 + $(PATCHLEVEL) \* 1000 + \
 			$(SUBLEVEL) )
