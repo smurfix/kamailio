@@ -561,7 +561,7 @@ void qm_free(void* qmp, void* p)
 			prev=FRAG_PREV(f);
 			/*	(struct qm_frag*)((char*)f - (struct qm_frag_end*)((char*)f-
 								sizeof(struct qm_frag_end))->size);*/
-			if (prev->u.is_free){
+			if (prev && prev->u.is_free){
 				/* join prev packet */
 #ifdef DBG_QM_MALLOC
 				qm_debug_frag(qm, prev, file, line);
